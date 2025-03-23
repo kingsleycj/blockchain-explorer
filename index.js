@@ -43,6 +43,7 @@ program
       console.log(chalk.yellow('Block Number:'), tx.blockNumber);
     } catch (error) {
       console.error(chalk.red('Error fetching transaction:'), error.message);
+      console.log(chalk.yellow('Tip:'), 'Make sure you are on the correct network and the transaction hash exists.');
     }
   });
 

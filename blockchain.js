@@ -7,7 +7,13 @@ async function getLatestBlock() {
 
 async function getTransaction(txHash) {
   const provider = getProvider();
-  return await provider.getTransaction(txHash);
+  const tx = await provider.getTransaction(txHash);
+  
+  if (!tx) {
+    throw new Error(`Transaction with hash ${txHash} not found. Check if the hash is correct and exists on this network.`);
+  }
+  
+  return tx;
 }
 
 async function getAccount(address) {
