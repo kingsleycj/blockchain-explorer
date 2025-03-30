@@ -2,11 +2,11 @@ const ethers = require('ethers');
 const { getProvider } = require('./config');
 
 console.log('Ethers version:', ethers.version);
-// console.log('Ethers Object:', ethers);
+console.log('Ethers Object:', ethers);
 
 function validateProvider(provider) {
   if (!provider) {
-    console.error('Error: Provider is undefined. Check your Infura API key or network setup.');
+    console.log('Error: Provider is undefined. Check your Infura API key or network setup.');
     process.exit(1); // Exit to prevent further errors
   }
 }
@@ -24,7 +24,7 @@ async function getLatestBlock() {
 
     return block;
   } catch (error) {
-    console.error('Error in getLatestBlock:', error.message);
+    console.log('Error in getLatestBlock:', error.message);
     throw error;
   }
 }
@@ -56,7 +56,7 @@ async function getTransaction(txHash) {
       status: receipt ? (receipt.status === 1 ? 'Success' : 'Failed') : 'Pending'
     };
   } catch (error) {
-    console.error('Error in getTransaction:', error.message);
+    console.log('Error in getTransaction:', error.message);
     throw error;
   }
 }
@@ -89,7 +89,7 @@ async function getAccount(address) {
       transactionCount: txCount
     };
   } catch (error) {
-    console.error('Error in getAccount:', error.message);
+    console.log('Error in getAccount:', error.message);
     throw error;
   }
 }
