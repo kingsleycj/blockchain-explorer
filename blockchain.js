@@ -2,7 +2,7 @@ const ethers = require('ethers');
 const { getProvider } = require('./config');
 
 console.log('Ethers version:', ethers.version);
-console.log('Ethers Object:', ethers);
+// console.log('Ethers Object:', ethers);
 
 function validateProvider(provider) {
   if (!provider) {
