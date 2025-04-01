@@ -56,12 +56,11 @@ program
       console.log(chalk.yellow('Hash:'), tx.hash);
       console.log(chalk.yellow('From:'), tx.from);
       console.log(chalk.yellow('To:'), tx.to);
-      console.log(chalk.yellow('Balance:'), ethers.formatEther(account.balance), 'ETH');
+      console.log(chalk.yellow('Value:'), tx.value, 'ETH');
 
-      
       // Handle cases where gasPrice might be null or undefined
       if (tx.gasPrice) {
-        console.log(chalk.yellow('Gas Price:'), ethers.utils.formatUnits(tx.gasPrice, 'gwei'), 'Gwei');
+        console.log(chalk.yellow('Gas Price:'), ethers.formatUnits(tx.gasPrice, 'gwei'), 'Gwei');
       }
       
       console.log(chalk.yellow('Block Number:'), tx.blockNumber);
