@@ -63,8 +63,8 @@ program
         console.log(chalk.yellow('Gas Price:'), ethers.formatUnits(tx.gasPrice, 'gwei'), 'Gwei');
       }
       
-      console.log(chalk.yellow('Block Number:'), tx.blockNumber);
-      console.log(chalk.yellow('Status:'), tx.status);
+      console.log(chalk.blueBright('Block Number:'), tx.blockNumber);
+      console.log(chalk.greenBright('Status:'), tx.status);
     } catch (error) {
       console.error(chalk.red('\nError:'), error.message);
       console.log(chalk.yellow('\nTroubleshooting tips:'));
