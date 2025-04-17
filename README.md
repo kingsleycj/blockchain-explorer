@@ -20,7 +20,7 @@ A command-line interface tool for exploring Ethereum blockchain data. This tool 
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/kingsleycj/blockchain-explorer.git
 cd blockchain-explorer
 ```
 
